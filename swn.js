@@ -11,14 +11,27 @@ const express = require('express');
 const axios = require('axios');
 const server = express();
 
-/* Configuración del puerto.
+/* Configuración del puerto
  *
  * Permite el funcionamiento en el entorno local
  * y en el de producción; por ejemplo, en Heroku.
  */
 server.set('port', process.env.PORT || 3000);
 
-/* Método GET.
+/* Middleware
+ *
+ * Funciona de intermediario al hacer una petición
+ * al servidor. Cada vez que se accede a un URL,
+ * se muestra en la terminal el método y url
+ * de dicha petición.
+ */
+server.use('/', (req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl}`);
+
+  next();
+});
+
+/* Método GET
  *
  * Una vez inicializado el servidor, al acceder
  * (al enviar un HTTP GET Request) a la URL
@@ -55,7 +68,7 @@ async function callback(req, res) {
   res.send(nombre).end();
 }
 
-/* Inicialización del servidor.
+/* Inicialización del servidor
  *
  * Es aquí donde el servidor comienza a trabajar,
  * es decir, donde comienza a "escuchar" peticiones
@@ -69,5 +82,7 @@ server.listen(server.set('port'), (error) => {
     return console.error(error);
   }
 
-  console.log('OK');
+  console.log('--------------------------');
+  console.log('Status: OK \nURL: http://localhost:3000');
+  console.log('--------------------------');
 });
