@@ -1,0 +1,33 @@
+{
+  "name": "star-wars-nombres",
+  "version": "1.0.0",
+  "description": "Un mini-servidor que retorna nombres aleatorios de personajes de Star Wars",
+  "main": "swn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node swn.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/despejala/star-wars-nombres.git"
+  },
+  "keywords": [
+    "star-wars",
+    "personajes",
+    "aleatorio",
+    "venezuela"
+  ],
+  "author": "Jobsamuel Núñez <jobsamuel.nunez@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/despejala/star-wars-nombres/issues"
+  },
+  "homepage": "https://github.com/despejala/star-wars-nombres#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": ">= 7.0"
+  }
+}

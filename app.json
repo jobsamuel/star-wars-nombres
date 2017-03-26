@@ -1,0 +1,8 @@
+{
+  "name": "star-wars-nombres",
+  "description": "Un mini-servidor que retorna nombres aleatorios de personajes de Star Wars",
+  "repository": "https://github.com/despejala/star-wars-nombres",
+  "logo": "https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/2604.png",
+  "success_url": "/",
+  "keywords": ["star-wars", "personajes", "aleatorio", "venezuela"]
+}
